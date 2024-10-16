@@ -1,0 +1,155 @@
+/* General resets and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #202122;
+}
+
+/* Main container: Divide into two sections */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Left: Table of Contents */
+#toc {
+    width: 20%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    position: sticky;
+    top: 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#toc h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#toc ul {
+    list-style: none;
+    padding-left: 15px;
+}
+
+#toc ul li {
+    margin: 8px 0;
+}
+
+#toc a {
+    text-decoration: none;
+    color: #0645ad;
+    font-weight: normal;
+}
+
+#toc a:hover {
+    text-decoration: underline;
+    color: #0b0080;
+}
+
+/* Vertical Divider */
+.vertical-divider {
+    width: 2px;
+    background-color: #ddd;
+    height: 100%;
+    margin: 0 20px;
+}
+
+/* Right: Main Content */
+main {
+    width: 75%;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Wikipedia-style headings */
+h1, h2, h3 {
+    color: #202122;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Collapsible sections */
+.collapsible {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.content {
+    display: none;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-top: 10px;
+    border-left: 4px solid #ccc;
+}
+
+/* Section content */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Section spacing */
+section {
+    margin-bottom: 30px;
+}
+
+/* Hyperlinks in content */
+a {
+    color: #0645ad;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    #toc {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;
+        height: auto;
+        position: relative;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .vertical-divider {
+        display: none;
+    }
+}
